@@ -3,12 +3,14 @@ var flowers = [];
 var drops = [];
 
 function setup(){
-  createCanvas(600,400);
+  var canvas = createCanvas(600,400);
   ship = new Ship();
   //drop = new Drop(width/2, height/2);
   for(var i = 0;i<6;i++){
     flowers[i] = new Flower(i*80+100,40);
   }
+
+  canvas.parent('sketch-holder');
 }
 
 function draw(){
@@ -45,7 +47,7 @@ function draw(){
   for(var i=drops.length - 1 ;i>=0;i--){
     if(drops[i].toDelete){
       drops.splice(i,1);
-    }  
+    }
   }
 }
 

@@ -7,5 +7,15 @@
     <script src = "drop.js"></script>
   </head>
   <body>
+    <div id="sketch-holder">
+      <!-- Our sketch will go here! -->
+    </div>
+    <br>
+    <br>
+    <button onclick="var drop = new Drop(ship.x, height-60);
+    drops.push(drop);">click me</button>
+    <button onclick = "ship.x+=12;"> move right </button>
+    <button onclick = "ship.x -= 12"> move left </button>
+    <button onclick = "setup();"> reset </button>
   </body>
 </html>
